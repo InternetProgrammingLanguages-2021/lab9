@@ -59,7 +59,7 @@ class App extends React.Component {
                         <Tabs>
                             <Tab label="Ввод">
                                 <div className="mui--text-title" style={{margin: "20px 0"}}>Введенные данные</div>
-                                <table className="mui-table">
+                                <table className="mui-table mui-table--bordered">
                                     <thead>
                                     <tr>
                                         <th>#</th>
@@ -68,7 +68,7 @@ class App extends React.Component {
                                     </thead>
                                     <tbody>
                                     {this.state.result.input.map((value, index) => <tr key={index}>
-                                        <th>{index + 1}</th>
+                                        <td style={{fontWeight: "bold"}}>{index + 1}</td>
                                         <td>{value}</td>
                                     </tr>)}
                                     </tbody>
@@ -76,7 +76,7 @@ class App extends React.Component {
                             </Tab>
                             <Tab label="Вывод">
                                 <div className="mui--text-title" style={{margin: "20px 0"}}>Возрастающие последовательности</div>
-                                <table className="mui-table">
+                                <table className="mui-table mui-table--bordered">
                                     <thead>
                                     <tr>
                                         <th>#</th>
@@ -87,8 +87,8 @@ class App extends React.Component {
                                     <tbody>
                                     {this.state.result.chunks.map((chunk, chunkIndex) => <React.Fragment key={chunkIndex}>
                                         {chunk.map((value, index) => <tr key={index}>
-                                            {(index === 0)?<th rowSpan={chunk.length}>{chunkIndex + 1}</th>:<></>}
-                                            <th>{index + 1}</th>
+                                            {(index === 0)?<td style={{fontWeight: "bold"}} rowSpan={chunk.length}>{chunkIndex + 1}</td>:<></>}
+                                            <td style={{fontWeight: "bold"}}>{index + 1}</td>
                                             <td>{value}</td>
                                         </tr>)}
                                     </React.Fragment>)}
@@ -97,7 +97,7 @@ class App extends React.Component {
                             </Tab>
                             <Tab label="Ответ">
                                 <div className="mui--text-title" style={{margin: "20px 0"}}>Самая длинная возрастающая последовательность</div>
-                                <table className="mui-table">
+                                <table className="mui-table mui-table--bordered">
                                     <thead>
                                     <tr>
                                         <th>#</th>
@@ -106,7 +106,7 @@ class App extends React.Component {
                                     </thead>
                                     <tbody>
                                     {this.state.result.max_length.map((value, index) => <tr key={index}>
-                                        <th>{index + 1}</th>
+                                        <td style={{fontWeight: "bold"}}>{index + 1}</td>
                                         <td>{value}</td>
                                     </tr>)}
                                     </tbody>
