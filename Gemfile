@@ -48,6 +48,8 @@ gem 'webpacker'
 
 gem 'react-rails'
 
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
   gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]
@@ -67,6 +69,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara", ">= 3.26"
-  gem "selenium-webdriver"
+  gem "selenium-webdriver", ">= 4.0.0"
   gem "webdrivers"
 end
