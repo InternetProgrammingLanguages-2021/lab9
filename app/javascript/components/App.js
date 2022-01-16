@@ -40,7 +40,7 @@ class App extends React.Component {
                 <Appbar>
                     <Container>
                         <div className="mui--text-display1">
-                            <div className="mui--appbar-line-height ">ЛР 8</div>
+                            <div className="mui--appbar-line-height ">ЛР 9</div>
                         </div>
                     </Container>
                 </Appbar>
